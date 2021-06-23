@@ -2,18 +2,18 @@
 <html>
 	<head>
 		<meta charset="utf-8">
-		<title></title>
+		<title>关于我们</title>
 		<link rel="stylesheet" href="bootstrap.min.css">
 		<link rel="stylesheet" href="about.css">
 	</head>
 	<body>
 		<div id="app">
-			<div class="navbar">
+			<div class="navbar" :style="`${ deep ? 'background: black; color: white' : 'background: transparent; color: black;' }`">
 				<div class="navbar-left">
-					logo
+					<img src="image/bootstrappng.png" alt="" width="40" height="40">
 				</div>
 				<div class="navbar-right">
-					<div class="navbar-item">团队服务</div>
+					<div class="navbar-item"><a href="index.html" class="nav-link">首页</a></div>
 					<div class="navbar-item">活动</div>
 					<div class="navbar-item">博客</div>
 					<div class="navbar-item">关于我们</div>
@@ -21,13 +21,13 @@
 			</div>
 			<div class="banner">
 				<h2 style="font-size: 36px; margin-bottom: 20px;">关于我们</h2>
-				<div>打造信息安全乌托邦，构建优质学习环境</div>
-				<div>了解下我们做的有意义的事情...</div>
+				<div>只要持之以恒，知识丰富了，终能发现其奥秘</div>
+				<div>忍耐和坚持虽是痛苦的事情，但却能渐渐地为你带来好处...</div>
 			</div>
 			<div class="main">
 				<div class="desc">
 					<h2>团队成员</h2>
-					<div>哭着流泪是怯懦的宣泄，笑着流泪是勇敢的宣言,排名不分前后</div>
+					<div>眼睛可以近视，目光不能短浅</div>
 				</div>
 				<div class="check-people">
 					<div class="check-title">{{ showpeople.nickname }}</div>
@@ -37,13 +37,13 @@
 						</div>
 						<div class="check-people-info">
 							<div class="text-info">
-								<h3>{{ showpeople.levelName }}</h3>
+								<h3 style="font-style: italic;">{{ showpeople.levelName }}</h3>
 								<div>
-									###########################
+									/////////////////////
 								</div>
-								<div>{{ showpeople.job }}</div>
-								<div>{{ showpeople.desc }}</div>
-								<div>{{ showpeople.sign }}</div>
+								<div>(kali㉿kali)-[~/desktop]<br>{{ showpeople.job }}</div>
+								<div>(kali㉿kali)-[~/desktop]<br>{{ showpeople.desc }}</div>
+								<div>(kali㉿kali)-[~/desktop]<br>{{ showpeople.sign }}</div>
 							</div>
 							<img :src="showpeople.people">
 						</div>
@@ -51,7 +51,7 @@
 				</div>
 				<div class="team-about">
 					<h3 style="margin-bottom: 20px;">关于团队</h3>
-					<div>WgpSec狼组安全团队成立于2014年12月31日</div>
+					<div>FACDay安全团队成立于2021年06月20日</div>
 					<div>由一群热爱网络安全的年轻人一同组成</div>
 					<div>过去的几年内没来得及让团队发生有效且质的变化</div>
 					<div>这一次，为了我们的slogan：打造信息安全乌托邦。前进！</div>
@@ -59,13 +59,13 @@
 				<div class="footer">
 					<div class="footer-left">
 						<div style="height: 200px;">
-							logo
+							<img src="image/bootstrappng.png" alt="" width="100" height="100">
 						</div>
-						<div>Copyright © 2021 WgpSec Team</div>
+						<div>Copyright © 2021 FACDay team</div>
 						<br>
 						<br>
-						<div>浙ICP备15046327号-1</div>
-						<div>浙公网安备 33010602009366号</div>
+						<!-- <div>浙ICP备15046327号-1</div>
+						<div>浙公网安备 33010602009366号</div>-->
 					</div>
 					<div class="footer-right">
 						<div class="footer-right-item">
@@ -107,25 +107,52 @@
 					peoples: [
 						{
 							avatar: 'https://www.wgpsec.org/_nuxt/img/keac.8b6dc50.jpeg',
-							nickname: 'Keac',
-							levelName: '[ WgpSec Team 团队负责人 ]',
-							job: '渗透 安全开发',
+							nickname: 'HMFIX',
+							levelName: '[ FACDay Team 团队负责人 ]',
+							job: '渗透 ',
 							desc: '喜欢折腾',
 							sign: '是一个怀揣着梦想的人',
 							people: 'img/1.svg'
 						},
 						{
 							avatar: 'https://www.wgpsec.org/_nuxt/img/g1thu7.67ecba8.jpg',
-							nickname: 'G1thu7',
-							levelName: '[ WgpSec Team 团队核心成员 ]',
-							job: '咸鱼',
+							nickname: 'Moxuan',
+							levelName: '[ FACDay Team 核心成员 ]',
+							job: '擅长外围打点、信息收集',
 							desc: '对设计细节方面有强迫症',
 							sign: '一个希望这一生有点作为的人',
 							people: 'img/2.svg'
 						},
 						{
 							avatar: 'https://www.wgpsec.org/_nuxt/img/keac.8b6dc50.jpeg',
-							nickname: 'Keac',
+							nickname: 'Robots',
+							levelName: '[ FACDay Team 核心成员 ]',
+							job: '擅长py脚本开发与web渗透',
+							desc: '喜欢折腾',
+							sign: '是一个怀揣着梦想的人',
+							people: 'img/1.svg'
+						},
+						{
+							avatar: 'https://www.wgpsec.org/_nuxt/img/keac.8b6dc50.jpeg',
+							nickname: 'Teemos',
+							levelName: '[ FACDay Team 核心成员 ]',
+							job: '擅长py脚本开发与web渗透',
+							desc: '喜欢折腾',
+							sign: '是一个怀揣着梦想的人',
+							people: 'img/1.svg'
+						},
+						{
+							avatar: 'https://www.wgpsec.org/_nuxt/img/keac.8b6dc50.jpeg',
+							nickname: 'gg7',
+							levelName: '[ FACDay Team 核心成员 ]',
+							job: '擅长Java开发和前端开发。努力向安全转型',
+							desc: '喜欢折腾',
+							sign: '是一个怀揣着梦想的人',
+							people: 'img/1.svg'
+						},
+						{
+							avatar: 'https://www.wgpsec.org/_nuxt/img/keac.8b6dc50.jpeg',
+							nickname: 'HMFIX',
 							levelName: '[ WgpSec Team 团队负责人 ]',
 							job: '渗透 安全开发',
 							desc: '喜欢折腾',
@@ -134,7 +161,7 @@
 						},
 						{
 							avatar: 'https://www.wgpsec.org/_nuxt/img/keac.8b6dc50.jpeg',
-							nickname: 'Keac',
+							nickname: 'HMFIX',
 							levelName: '[ WgpSec Team 团队负责人 ]',
 							job: '渗透 安全开发',
 							desc: '喜欢折腾',
@@ -143,7 +170,7 @@
 						},
 						{
 							avatar: 'https://www.wgpsec.org/_nuxt/img/keac.8b6dc50.jpeg',
-							nickname: 'Keac',
+							nickname: 'HMFIX',
 							levelName: '[ WgpSec Team 团队负责人 ]',
 							job: '渗透 安全开发',
 							desc: '喜欢折腾',
@@ -152,34 +179,7 @@
 						},
 						{
 							avatar: 'https://www.wgpsec.org/_nuxt/img/keac.8b6dc50.jpeg',
-							nickname: 'Keac',
-							levelName: '[ WgpSec Team 团队负责人 ]',
-							job: '渗透 安全开发',
-							desc: '喜欢折腾',
-							sign: '是一个怀揣着梦想的人',
-							people: 'img/1.svg'
-						},
-						{
-							avatar: 'https://www.wgpsec.org/_nuxt/img/keac.8b6dc50.jpeg',
-							nickname: 'Keac',
-							levelName: '[ WgpSec Team 团队负责人 ]',
-							job: '渗透 安全开发',
-							desc: '喜欢折腾',
-							sign: '是一个怀揣着梦想的人',
-							people: 'img/1.svg'
-						},
-						{
-							avatar: 'https://www.wgpsec.org/_nuxt/img/keac.8b6dc50.jpeg',
-							nickname: 'Keac',
-							levelName: '[ WgpSec Team 团队负责人 ]',
-							job: '渗透 安全开发',
-							desc: '喜欢折腾',
-							sign: '是一个怀揣着梦想的人',
-							people: 'img/1.svg'
-						},
-						{
-							avatar: 'https://www.wgpsec.org/_nuxt/img/keac.8b6dc50.jpeg',
-							nickname: 'Keac',
+							nickname: 'HMFIX',
 							levelName: '[ WgpSec Team 团队负责人 ]',
 							job: '渗透 安全开发',
 							desc: '喜欢折腾',
@@ -188,21 +188,22 @@
 						}
 					],
 					showpeople: {
-						avatar: 'https://www.wgpsec.org/_nuxt/img/keac.8b6dc50.jpeg',
-						nickname: 'Keac',
-						levelName: '[ WgpSec Team 团队负责人 ]',
-						job: '渗透 安全开发',
-						desc: '喜欢折腾',
-						sign2: '是一个怀揣着梦想的人',
-						people: 'img/1.svg'
-					}
+							avatar: 'https://www.wgpsec.org/_nuxt/img/keac.8b6dc50.jpeg',
+							nickname: 'HMFIX',
+							levelName: '[ FACDay Team 团队负责人 ]',
+							job: '渗透 ',
+							desc: '喜欢折腾',
+							sign: '是一个怀揣着梦想的人',
+							people: 'img/1.svg'
+					},
+					deep: false
 				},
 				created() {
 					window.addEventListener('scroll', this.handleScroll, true)
 				},
 				methods:{
 					handleScroll(){
-						console.log(document.documentElement.scrollTop)
+						this.deep = document.documentElement.scrollTop >= 500 ? true : false
 					}
 				}
 			})
