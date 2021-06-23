@@ -8,7 +8,7 @@
 	</head>
 	<body>
 		<div id="app">
-			<div class="navbar">
+			<div class="navbar" :style="`${ deep ? 'background: black; color: white' : 'background: transparent; color: black;' }`">
 				<div class="navbar-left">
 					logo
 				</div>
@@ -195,14 +195,15 @@
 							desc: '喜欢折腾',
 							sign: '是一个怀揣着梦想的人',
 							people: 'img/1.svg'
-					}
+					},
+					deep: false
 				},
 				created() {
 					window.addEventListener('scroll', this.handleScroll, true)
 				},
 				methods:{
 					handleScroll(){
-						console.log(document.documentElement.scrollTop)
+						this.deep = document.documentElement.scrollTop >= 500 ? true : false
 					}
 				}
 			})
