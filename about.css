@@ -75,6 +75,7 @@
 .check-people-info{
 	flex: 7;
 	display: flex;
+	padding: 5px 10px;
 	justify-content: space-between;
 }
 .team-about{
