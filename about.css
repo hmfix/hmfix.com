@@ -1,5 +1,5 @@
 .navbar{
-	width: 50%;
+	width: 100%;
 	display: flex;
 	position: fixed;
 	color: white;
@@ -75,6 +75,7 @@
 .check-people-info{
 	flex: 7;
 	display: flex;
+	padding: 5px 10px;
 	justify-content: space-between;
 }
 .team-about{
